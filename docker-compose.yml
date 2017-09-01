@@ -1,0 +1,25 @@
+wordpress:
+  build: ./
+  links:
+    - db:mysql
+  ports:
+    - 80
+  environment:
+    VIRTUAL_HOST: test.dev
+    WORDPRESS_DB_USER: jamesooi
+    WORDPRESS_DB_PASSWORD: 123456
+    WORDPRESS_DB_NAME: wordpress
+  volumes:
+     - ./_docker/public_html:/var/www/html
+     - ./build:/var/www/html/wp-content/themes/mythemename
+
+db:
+  image: mysql
+  environment:
+    MYSQL_USER: jamesooi
+    MYSQL_PASSWORD: 123456
+    MYSQL_DATABASE: wordpress
+    MYSQL_ROOT_PASSWORD: 123456
+  volumes:
+    - ./_docker/db_data:/var/lib/mysql
+    - ./_docker/db_init:/docker-entrypoint-initdb.d

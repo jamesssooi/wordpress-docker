@@ -1,0 +1,23 @@
+/** ============================================================================
+ * Color Definitions
+ * ========================================================================== */
+
+
+/* Primary Color
+/* -------------------------------------------------------------------------- */
+$color-primary: rgb(237, 28, 36);
+$color-primary-l10: lighten($color-primary, 10%);
+$color-primary-l20: lighten($color-primary, 20%);
+$color-primary-l30: lighten($color-primary, 30%);
+$color-primary-l40: lighten($color-primary, 40%);
+$color-primary-l50: lighten($color-primary, 50%);
+
+
+/* Secondary Color
+/* -------------------------------------------------------------------------- */
+$color-secondary: rgb(30, 30, 30);
+$color-secondary-l10: lighten($color-secondary, 10%);
+$color-secondary-l20: lighten($color-secondary, 20%);
+$color-secondary-l30: lighten($color-secondary, 30%);
+$color-secondary-l40: lighten($color-secondary, 40%);
+$color-secondary-l50: lighten($color-secondary, 50%);
